@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Marketing | Joker's Sparkle Party</title>
+    <style>
+        :root { --bg-dark: #120424; --neon-pink: #ff007f; --neon-cyan: #00f0ff; --glass: rgba(255, 255, 255, 0.08); --safe-top: env(safe-area-inset-top); }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: radial-gradient(circle at center, #2a0845 0%, var(--bg-dark) 100%); color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+        nav { padding-top: max(30px, var(--safe-top)); padding-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; background: rgba(18, 4, 36, 0.6); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,0,127,0.3); }
+        nav a { color: #fff; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 10px 20px; border-radius: 25px; transition: 0.3s; border: 1px solid transparent; text-transform: uppercase; }
+        nav a:hover, nav a.active { border-color: var(--neon-cyan); background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex: 1; animation: fadeIn 1s; }
+        h1 { color: var(--neon-pink); font-size: 2.5rem; text-shadow: 0 0 15px rgba(255,0,127,0.5); }
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: 24px; line-height: 1.8; font-size: 1.1rem; backdrop-filter: blur(10px); }
+        .highlight-box { background: rgba(0, 240, 255, 0.1); border-left: 4px solid var(--neon-cyan); padding: 20px; margin: 25px 0; border-radius: 0 15px 15px 0; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html" class="active">Marketing</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1>My Developer Journey</h1>
+            <p>Hello! My name is <strong>Ruslana Habokan</strong>. As a passionate beginner developer, I poured my heart into creating <em>Joker's Sparkle Party</em>. My ultimate goal is to bring real value, joy, and a polished experience to every person who downloads my app.</p>
+            
+            <div class="highlight-box">
+                <strong>Current Status: 100% Free!</strong><br>
+                Right now, the app is completely free. There are no paid features, no subscriptions, and no hidden costs. I want you to simply enjoy the game and the effort I've put into it.
+            </div>
+
+            <p><strong>Looking to the Future:</strong> Game development takes a massive amount of time, learning, and resources. To help support my growth as a developer and to keep improving the app with exciting new content, I plan to introduce premium features and subscriptions in the future to generate income.</p>
+            
+            <p>Thank you for being part of this sparkling journey and supporting independent development!</p>
+        </div>
+    </div>
+    <footer>&copy; 2026 Ruslana Habokan. All rights reserved.</footer>
+</body>
+</html>
