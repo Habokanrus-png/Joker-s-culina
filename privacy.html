@@ -3,76 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Privacy Policy | Joker's Sparkle Party</title>
+    <title>Privacy Policy | Joker’s culina</title>
     <style>
-        :root { --bg-dark: #120424; --neon-pink: #ff007f; --neon-cyan: #00f0ff; --glass: rgba(255, 255, 255, 0.08); --safe-top: env(safe-area-inset-top); }
-        * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: radial-gradient(circle at center, #2a0845 0%, var(--bg-dark) 100%); color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
-        nav { padding-top: max(30px, var(--safe-top)); padding-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; background: rgba(18, 4, 36, 0.6); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,0,127,0.3); }
-        nav a { color: #fff; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 10px 20px; border-radius: 25px; transition: 0.3s; border: 1px solid transparent; text-transform: uppercase; }
-        nav a:hover, nav a.active { border-color: var(--neon-cyan); background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex: 1; }
-        h1 { color: var(--neon-pink); font-size: 2.5rem; border-bottom: 1px solid rgba(255,0,127,0.3); padding-bottom: 15px; }
-        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: 24px; line-height: 1.6; backdrop-filter: blur(10px); }
-        .alert-box { background: rgba(0, 240, 255, 0.1); border: 1px solid var(--neon-cyan); padding: 20px; border-radius: 15px; margin: 25px 0; font-weight: bold; text-align: center; color: var(--neon-cyan); text-shadow: 0 0 8px rgba(0,240,255,0.4); }
-        
-        /* Interactive Native Button */
-        .close-app-btn {
-            display: block; width: 100%; max-width: 400px; margin: 50px auto 10px; padding: 18px;
-            background: linear-gradient(90deg, #ff007f, #b300ff); border: none; color: white;
-            border-radius: 30px; font-size: 1.1rem; font-weight: bold; cursor: pointer;
-            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(255, 0, 127, 0.4);
+        :root {
+            --primary-bg: #1a0b0b;
+            --accent-gold: #d4af37;
+            --text-main: #f5f5f5;
+            --safe-top: env(safe-area-inset-top, 20px);
         }
-        .close-app-btn:active { transform: scale(0.95); box-shadow: 0 5px 10px rgba(255, 0, 127, 0.4); }
+        body { margin: 0; font-family: sans-serif; background: var(--primary-bg); color: var(--text-main); }
+        nav { padding-top: calc(var(--safe-top) + 20px); padding-bottom: 20px; text-align: center; background: rgba(0,0,0,0.3); }
+        nav a { color: var(--text-main); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        .content { max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.8; }
+        h1 { color: var(--accent-gold); }
+        .highlight-box { border: 1px solid var(--accent-gold); padding: 20px; border-radius: 10px; background: rgba(212, 175, 55, 0.05); margin: 20px 0; }
         
-        footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 0.85rem; }
+        .close-btn {
+            display: block; width: 200px; margin: 40px auto;
+            padding: 15px; background: var(--accent-gold);
+            color: #1a0b0b; border: none; border-radius: 30px;
+            font-weight: bold; cursor: pointer; text-align: center;
+            transition: 0.3s; text-decoration: none;
+        }
+        .close-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="marketing.html">Marketing</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html" class="active">Privacy</a>
-    </nav>
-    <div class="container">
-        <div class="card">
-            <h1>Privacy Policy</h1>
-            <p><strong>Effective Date:</strong> Today</p>
-            
-            <div class="alert-box">
-                Joker's Sparkle Party respects your privacy: We do NOT collect, do NOT store, and do NOT share any of your data.
-            </div>
 
-            <h2>1. Data Collection</h2>
-            <p>Our application is designed to be completely private. We do not integrate any third-party tracking software, analytics SDKs, or data-collection tools. Your gameplay and app usage remain entirely on your device.</p>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="marketing.html">Marketing</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html" style="color: var(--accent-gold);">Privacy</a>
+</nav>
 
-            <h2>2. Data Storage & Sharing</h2>
-            <p>Since absolutely zero data is collected by us, there is nothing to store on external servers and nothing to transmit or share with any third parties.</p>
-
-            <h2>3. Contact Developer</h2>
-            <p>If you have any questions or concerns regarding this policy, please reach out via email: <strong>habokanrus@icloud.com</strong></p>
-
-            <button class="close-app-btn" onclick="closeWebView()">Return to Party</button>
-        </div>
+<div class="content">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: October 2024</p>
+    
+    <div class="highlight-box">
+        <strong>Our Promise:</strong> We do not collect, do not store, and do not transmit any of your personal data. Your privacy is our absolute priority.
     </div>
-    <footer>&copy; 2026 Ruslana Habokan. All rights reserved.</footer>
 
-    <script>
-        function closeWebView() {
-            try {
-                // Вызов метода для iOS WKWebView
-                if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWebView) {
-                    window.webkit.messageHandlers.closeWebView.postMessage("close");
-                } else {
-                    console.log("Native iOS handler 'closeWebView' not found.");
-                    alert("This button closes the screen when opened inside the Joker's Sparkle Party app.");
-                }
-            } catch (error) {
-                console.error("Error communicating with native app:", error);
-            }
+    <h2>1. Data Collection</h2>
+    <p>Joker’s culina is built with a privacy-first approach. We do not require account creation, and we do not use any third-party tracking or analytics SDKs that identify you.</p>
+
+    <h2>2. Data Storage</h2>
+    <p>Since we do not collect data, nothing is stored on our servers. All app-related preferences are saved locally on your device.</p>
+
+    <h2>3. Third-Party Access</h2>
+    <p>No data is ever sold or shared with third parties. We have no interest in your personal information.</p>
+
+    <h2>4. Contact</h2>
+    <p>If you have questions, please reach out to habokanrus@icloud.com.</p>
+
+    <button class="close-btn" onclick="closeWebView()">Back to App</button>
+</div>
+
+<script>
+    function closeWebView() {
+        try {
+            // This calls the native iOS handler
+            window.webkit.messageHandlers.closeWebView.postMessage(null);
+        } catch (e) {
+            console.log("Not in a native environment or handler missing");
+            // If in a normal browser, just go back
+            window.history.back();
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
