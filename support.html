@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Support | Joker's Sparkle Party</title>
+    <style>
+        :root { --bg-dark: #120424; --neon-pink: #ff007f; --neon-cyan: #00f0ff; --glass: rgba(255, 255, 255, 0.08); --safe-top: env(safe-area-inset-top); }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: radial-gradient(circle at center, #2a0845 0%, var(--bg-dark) 100%); color: #fff; min-height: 100vh; display: flex; flex-direction: column; text-align: center; }
+        nav { padding-top: max(30px, var(--safe-top)); padding-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; background: rgba(18, 4, 36, 0.6); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,0,127,0.3); }
+        nav a { color: #fff; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 10px 20px; border-radius: 25px; transition: 0.3s; border: 1px solid transparent; text-transform: uppercase; }
+        nav a:hover, nav a.active { border-color: var(--neon-cyan); background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
+        .container { max-width: 600px; margin: 60px auto; padding: 0 20px; flex: 1; }
+        h1 { color: var(--neon-cyan); font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,240,255,0.5); }
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 50px 30px; border-radius: 24px; backdrop-filter: blur(10px); }
+        .btn-glow { display: inline-block; margin-top: 30px; padding: 15px 40px; background: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); border-radius: 30px; text-decoration: none; font-size: 1.1rem; font-weight: bold; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-glow:hover { background: var(--neon-pink); color: #fff; box-shadow: 0 0 25px var(--neon-pink); transform: translateY(-3px); }
+        footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1>Need Assistance?</h1>
+            <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9;">If you have any feedback, encountered a bug, or just want to reach out to the developer of Joker's Sparkle Party, I am here to help!</p>
+            
+            <a href="mailto:habokanrus@icloud.com" class="btn-glow">Contact Developer</a>
+            
+            <p style="margin-top: 30px; opacity: 0.6; font-family: monospace;">habokanrus@icloud.com</p>
+        </div>
+    </div>
+    <footer>&copy; 2026 Ruslana Habokan. All rights reserved.</footer>
+</body>
+</html>
