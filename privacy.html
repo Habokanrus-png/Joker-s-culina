@@ -3,75 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Privacy Policy | Joker’s culina</title>
+    <title>Privacy Policy | Joker's Culina</title>
     <style>
-        :root {
-            --primary-bg: #1a0b0b;
-            --accent-gold: #d4af37;
-            --text-main: #f5f5f5;
-            --safe-top: env(safe-area-inset-top, 20px);
+        :root { --bg: #1a0b2e; --accent: #ffd700; --glass: rgba(255, 255, 255, 0.05); --text: #ffffff; --text-dim: #b3a2c7; }
+        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; align-items: center; }
+        .container { width: 100%; max-width: 500px; padding: calc(env(safe-area-inset-top) + 70px) 20px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; }
+        .nav { display: flex; justify-content: space-around; background: var(--glass); backdrop-filter: blur(20px); padding: 12px; border-radius: 25px; border: 1px solid rgba(255, 215, 0, 0.2); }
+        .nav a { text-decoration: none; color: var(--text-dim); font-size: 14px; padding: 8px 12px; }
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); border-radius: 35px; padding: 35px; backdrop-filter: blur(25px); }
+        h1 { font-size: 24px; color: var(--accent); margin-bottom: 20px; }
+        p { font-size: 16px; color: var(--text-dim); line-height: 1.7; }
+        .close-btn { 
+            background: rgba(255, 215, 0, 0.1); border: 2px solid var(--accent); 
+            color: var(--accent); padding: 18px; border-radius: 20px; width: 100%; 
+            font-weight: bold; margin-top: 30px; cursor: pointer; font-size: 16px;
+            transition: 0.3s;
         }
-        body { margin: 0; font-family: sans-serif; background: var(--primary-bg); color: var(--text-main); }
-        nav { padding-top: calc(var(--safe-top) + 20px); padding-bottom: 20px; text-align: center; background: rgba(0,0,0,0.3); }
-        nav a { color: var(--text-main); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-        .content { max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.8; }
-        h1 { color: var(--accent-gold); }
-        .highlight-box { border: 1px solid var(--accent-gold); padding: 20px; border-radius: 10px; background: rgba(212, 175, 55, 0.05); margin: 20px 0; }
-        
-        .close-btn {
-            display: block; width: 200px; margin: 40px auto;
-            padding: 15px; background: var(--accent-gold);
-            color: #1a0b0b; border: none; border-radius: 30px;
-            font-weight: bold; cursor: pointer; text-align: center;
-            transition: 0.3s; text-decoration: none;
-        }
-        .close-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+        .close-btn:active { background: var(--accent); color: #1a0b2e; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="privacy.html" style="color: var(--accent); font-weight: bold;">Privacy</a>
+            <a href="support.html">Support</a>
+        </div>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="marketing.html">Marketing</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html" style="color: var(--accent-gold);">Privacy</a>
-</nav>
-
-<div class="content">
-    <h1>Privacy Policy</h1>
-    <p>Last updated: October 2024</p>
-    
-    <div class="highlight-box">
-        <strong>Our Promise:</strong> We do not collect, do not store, and do not transmit any of your personal data. Your privacy is our absolute priority.
+        <div class="card">
+            <h1>Privacy Policy</h1>
+            <p><strong>Transparency is our priority.</strong></p>
+            <p>At Joker's Culina - Jewel Joker, we respect your right to privacy. Our policy is simple and absolute:</p>
+            <p><strong>We do not collect, store, or share any of your personal data.</strong> The app does not track your location, does not access your contacts, and does not require any personal identifiers to function.</p>
+            <p>Your experience remains entirely local to your device, ensuring total security and peace of mind.</p>
+            
+            <button class="close-btn" onclick="closePolicyView()">Understood & Return</button>
+        </div>
     </div>
 
-    <h2>1. Data Collection</h2>
-    <p>Joker’s culina is built with a privacy-first approach. We do not require account creation, and we do not use any third-party tracking or analytics SDKs that identify you.</p>
-
-    <h2>2. Data Storage</h2>
-    <p>Since we do not collect data, nothing is stored on our servers. All app-related preferences are saved locally on your device.</p>
-
-    <h2>3. Third-Party Access</h2>
-    <p>No data is ever sold or shared with third parties. We have no interest in your personal information.</p>
-
-    <h2>4. Contact</h2>
-    <p>If you have questions, please reach out to habokanrus@icloud.com.</p>
-
-    <button class="close-btn" onclick="closeWebView()">Back to App</button>
-</div>
-
-<script>
-    function closeWebView() {
-        try {
-            // This calls the native iOS handler
-            window.webkit.messageHandlers.closeWebView.postMessage(null);
-        } catch (e) {
-            console.log("Not in a native environment or handler missing");
-            // If in a normal browser, just go back
-            window.history.back();
+    <script>
+        function closePolicyView() {
+            // Функция вызова нативного кода для iOS (WKWebView)
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWebView) {
+                window.webkit.messageHandlers.closeWebView.postMessage("close");
+            } else {
+                // Если открыто в обычном браузере
+                console.log("Native close handler not detected.");
+                alert("Thank you! You can now close this tab.");
+            }
         }
-    }
-</script>
-
+    </script>
 </body>
 </html>
