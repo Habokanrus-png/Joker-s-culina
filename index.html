@@ -3,141 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Joker’s culina | Developer Page</title>
+    <title>Ruslana Habokan | Joker's Culina</title>
     <style>
         :root {
-            --primary-bg: #1a0b0b;
-            --accent-gold: #d4af37;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --text-main: #f5f5f5;
-            --safe-top: env(safe-area-inset-top, 20px);
+            --bg: #1a0b2e;
+            --accent: #ffd700; /* Gold */
+            --glass: rgba(255, 255, 255, 0.05);
+            --text: #ffffff;
+            --text-dim: #b3a2c7;
         }
-
-        * { box-sizing: border-box; }
         body {
             margin: 0; padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(circle at top right, rgba(255, 215, 0, 0.1), transparent 400px),
+                              radial-gradient(circle at bottom left, rgba(147, 51, 234, 0.2), transparent 500px);
+            color: var(--text);
+            display: flex; flex-direction: column; align-items: center;
         }
-
-        /* Safe Area Header Fix */
-        nav {
-            padding-top: calc(var(--safe-top) + 20px);
-            padding-bottom: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-gold);
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            animation: fadeIn 1.5s ease;
-        }
-
-        h1 { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 10px; }
-        .subtitle { font-style: italic; opacity: 0.8; }
-
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 100%; max-width: 500px;
+            padding-top: calc(env(safe-area-inset-top) + 70px); /* Ниже челки */
+            padding-bottom: 40px; box-sizing: border-box;
+            display: flex; flex-direction: column; gap: 20px; padding-left: 20px; padding-right: 20px;
         }
-
+        .nav {
+            display: flex; justify-content: space-around;
+            background: var(--glass); backdrop-filter: blur(20px);
+            padding: 12px; border-radius: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: sticky; top: 70px; z-index: 100;
+        }
+        .nav a {
+            text-decoration: none; color: var(--text-dim); font-size: 14px;
+            padding: 8px 12px; border-radius: 15px; transition: 0.3s;
+        }
+        .nav a.active { background: rgba(255, 215, 0, 0.15); color: var(--accent); font-weight: bold; }
+        
         .card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(5px);
-            transform: translateY(0);
-            transition: 0.4s;
+            background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 35px; padding: 35px; text-align: center; backdrop-filter: blur(25px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-gold);
+        .app-icon {
+            width: 90px; height: 90px;
+            background: linear-gradient(135deg, #ffd700, #b8860b);
+            border-radius: 22px; margin: 0 auto 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 45px; box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
         }
-
-        .dev-profile {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
+        h1 { font-size: 26px; margin: 0; color: var(--accent); }
+        .dev-label { font-size: 14px; color: var(--text-dim); margin-top: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .content { margin-top: 25px; line-height: 1.6; color: var(--text-dim); font-size: 16px; }
+        .action-btn {
+            background: var(--accent); color: #1a0b2e;
+            padding: 18px; border-radius: 20px; text-decoration: none;
+            font-weight: 800; text-align: center; margin-top: 10px;
+            transition: 0.3s; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
         }
-
-        .dev-details h3 { margin: 0; color: var(--accent-gold); }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; }
+        .action-btn:active { transform: scale(0.96); }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html">Support</a>
+        </div>
 
-<nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="marketing.html">Marketing</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy</a>
-</nav>
-
-<div class="hero">
-    <h1>Joker’s culina</h1>
-    <p class="subtitle">Where taste meets playfulness</p>
-</div>
-
-<div class="container">
-    <div class="card">
-        <h2>About the App</h2>
-        <p>Joker’s culina is a unique culinary experience designed to bring joy and creativity back to your routine. We focus on high-quality interactions and a seamless interface that delights every user.</p>
-    </div>
-
-    <div class="card">
-        <h2>Meet the Developer</h2>
-        <div class="dev-profile">
-            <div class="dev-details">
-                <h3>Ruslana Habokan</h3>
-                <p>Independent iOS Developer</p>
-                <p>Email: habokanrus@icloud.com</p>
+        <div class="card">
+            <div class="app-icon">🃏</div>
+            <h1>Joker's Culina</h1>
+            <div class="dev-label">By Ruslana Habokan</div>
+            <div class="content">
+                <p>Welcome to the official developer portal for <strong>Joker's Culina - Jewel Joker</strong>. I am dedicated to creating immersive and high-quality mobile experiences that bring joy and value to your device.</p>
             </div>
         </div>
-        <p style="margin-top: 15px;">I am committed to transparency and user-centric design. My mission is to build apps that provide real value while maintaining the highest standards of privacy.</p>
+
+        <a href="marketing.html" class="action-btn">Meet the Developer</a>
     </div>
-</div>
-
-<footer>
-    &copy; 2024 Ruslana Habokan. All rights reserved.
-</footer>
-
 </body>
 </html>
